@@ -19,6 +19,7 @@ public:
 public:
 	void SetPositionX(long);
 	void SetPositionY(long);
+	void SetVecRePut(Bullet*);
 public:
 	RECT* GetRECT() const;
 	list<Bullet*>& GetBulletList();

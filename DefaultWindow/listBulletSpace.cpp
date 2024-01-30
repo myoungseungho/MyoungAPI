@@ -185,13 +185,18 @@ void PlayerRender(const HDC& hdc)
 
 void Collision()
 {
+	//발사한 총알리스트 가져오기
 	list<Bullet*>& bulletList = player->GetBulletList();
+	//발사된 총알 충돌 체크
 	for (list<Bullet*> ::iterator iter = bulletList.begin(); iter != bulletList.end();)
 	{
+		//총알 위치값 받아오기
 		RECT rect = (*iter)->GetBulletRECT();
+		//조건 검사
 		if (rect.left < 0 || rect.top < 0 || rect.right > 800 || rect.bottom > 600)
 		{
-			Safe_Delete((*iter));
+			//다시 player가 가지고 있는 발사되지 않은 총알 리스트에 넣기
+			player->SetVecRePut(*iter);
 			auto tempIter = bulletList.erase(iter);
 			iter = tempIter;
 		}

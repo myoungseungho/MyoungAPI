@@ -38,6 +38,11 @@ void Player::SetPositionY(long _input)
 	playerRECT->bottom += _input;
 }
 
+void Player::SetVecRePut(Bullet* _pBullet)
+{
+	vecUnUsedBullet.push_back(_pBullet);
+}
+
 RECT* Player::GetRECT() const
 {
 	return playerRECT;
