@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Player.h"
 
-Player::Player() : playerRECT(nullptr), currentCenterPosition(nullptr), currentRotationPosition(nullptr), m_maxBullet(100), m_Radius(0.0), m_CurrentDrgree(0) {}
+Player::Player() : playerRECT(nullptr), currentCenterPosition(nullptr), currentRotationPosition(nullptr), m_maxBullet(100), m_Radius(0.0), m_CurrentDrgree(1) {}
 
 Player::~Player()
 {
@@ -35,6 +35,7 @@ void Player::SetPositionY(long _input)
 {
 	playerRECT->top += _input;
 	playerRECT->bottom += _input;
+	currentRotationPosition->y += _input;
 }
 
 void Player::SetRotation(TimeDirection _direction)
@@ -48,21 +49,27 @@ void Player::SetRotation(TimeDirection _direction)
 
 	switch (_direction)
 	{
-	case TimeDirection::TIMEDIRECTION_LEFT:
+	case TIMEDIRECTION_LEFT:
 		m_CurrentDrgree++;
+		x = currentCenterPosition->x - (m_Radius * sin(radians));
+		y = currentCenterPosition->y - (m_Radius * cos(radians));
+
+		currentRotationPosition->x = x;
+		currentRotationPosition->y = y;
 		break;
-	case TimeDirection::TIMEDIRECTION_RIGHT:
+	case TIMEDIRECTION_RIGHT:3
 		m_CurrentDrgree--;
+		x = currentCenterPosition->x - (m_Radius * sin(radians));
+		y = currentCenterPosition->y - (m_Radius * cos(radians));
+
+		currentRotationPosition->x = x;
+		currentRotationPosition->y = y;
 		break;
-	default:
+	case TIMEDIRECTION_TOP:
+		break;
+	case TIMEDIRECTION_BOTTOM:
 		break;
 	}
-
-	x = currentCenterPosition->x - (m_Radius * sin(radians));
-	y = currentCenterPosition->y - (m_Radius * cos(radians));
-
-	currentRotationPosition->x = x;
-	currentRotationPosition->y = y;
 }
 
 void Player::SetVecRePut(Bullet* _pBullet)
