@@ -173,14 +173,18 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 Player* player;
 int g_FireNumber = 0;
-
 void PlayerRender(const HDC& hdc)
 {
 	RECT* playerRECT = player->GetRECT();
+	Vector2* centerVector = player->GetCenterPosition();
+	Vector2* rotationVector = player->GetCurrentRotationPosition();
+
 	if (playerRECT == nullptr)
 		return;
 
 	Rectangle(hdc, playerRECT->left, playerRECT->top, playerRECT->right, playerRECT->bottom);
+	MoveToEx(hdc, centerVector->x, centerVector->y, NULL);
+	LineTo(hdc, rotationVector->x, rotationVector->y);
 }
 
 void Collision()
@@ -323,11 +327,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			break;
 
 		case VK_RIGHT:
-			player->SetPositionX(10l);
+			//player->SetPositionX(10l);
+			player->SetRotation(TimeDirection::TIMEDIRECTION_RIGHT);
+
 			break;
 
 		case VK_LEFT:
-			player->SetPositionX(-10l);
+			//player->SetPositionX(-10l);
+			player->SetRotation(TimeDirection::TIMEDIRECTION_LEFT);
 			break;
 
 		case VK_UP:

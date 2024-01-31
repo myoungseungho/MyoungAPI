@@ -1,2 +1,5 @@
-﻿  listBulletSpace.cpp
-  DefaultWindow.vcxproj -> C:\Users\myoun\Downloads\2일차-API 초기화 구문 2\Debug\DefaultWindow.exe
+﻿  Player.cpp
+C:\Users\명승호\Desktop\MyoungAPI\DefaultWindow\Player.cpp(112,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  (소스 파일 '/Player.cpp'을(를) 컴파일하는 중)
+  
+  DefaultWindow.vcxproj -> C:\Users\명승호\Desktop\MyoungAPI\Debug\DefaultWindow.exe

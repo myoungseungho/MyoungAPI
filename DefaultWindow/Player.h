@@ -19,9 +19,13 @@ public:
 public:
 	void SetPositionX(long);
 	void SetPositionY(long);
+	void SetRotation(TimeDirection);
+
 	void SetVecRePut(Bullet*);
 public:
 	RECT* GetRECT() const;
+	Vector2* GetCenterPosition();
+	Vector2* GetCurrentRotationPosition();
 	list<Bullet*>& GetBulletList();
 public:
 	void ShotBullet(Direction);
@@ -31,9 +35,13 @@ private:
 
 private:
 	RECT* playerRECT;
-	Vector2* currentPosition;
+	Vector2* currentCenterPosition;
+	Vector2* currentRotationPosition;
 	vector<Bullet*> vecUnUsedBullet;
 	list<Bullet*> listUsedBullet;
 	int m_maxBullet;
+	double m_Radius;
+	int m_CurrentDrgree;
+
 };
 

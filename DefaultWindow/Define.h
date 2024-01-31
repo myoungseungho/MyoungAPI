@@ -1,6 +1,9 @@
 #pragma once
 #include "stdafx.h"
 
+const float M_PI = 3.14f;
+
+
 template <typename T>
 void Safe_Delete(T& t)
 {
@@ -23,8 +26,10 @@ void Safe_ArrayDelete(T& t)
 
 struct Vector2
 {
-	int x;
-	int y;
+	Vector2(double _x, double _y) : x(_x), y(_y) {}
+	
+	double x;
+	double y;
 };
 
 enum Direction
@@ -38,4 +43,10 @@ enum Direction
 	LEFTBOTTOM,
 	RIGHTBOTTOM,
 	RIGHTTOP
+};
+
+enum TimeDirection
+{
+	TIMEDIRECTION_LEFT,
+	TIMEDIRECTION_RIGHT
 };

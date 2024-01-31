@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include "DefaultWindow.h"
 
+#pragma region 초기화
+
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
@@ -163,6 +165,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 // kernel : 메모리를 관리하고 프로그램을 실행시키는 도구
 // user : 유저 인터페이스와 윈도우 관리 도구
 // gdi : 화면 처리와 그래픽 담당
+
+#pragma endregion
 
 
 RECT			rc{ 100,100, 200,200 };
