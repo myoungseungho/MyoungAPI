@@ -31,8 +31,9 @@ void Player::SetPositionX(long _input)
 	playerRECT->right += _input;
 }
 
-void Player::SetPositionY(long _input)
+void Player::SetPositionUp(long _input)
 {
+	Vector2 newVector = Vector2::GetDirectionVector(*currentCenterPosition, *currentRotationPosition);
 	playerRECT->top += _input;
 	playerRECT->bottom += _input;
 	currentRotationPosition->y += _input;
@@ -57,7 +58,7 @@ void Player::SetRotation(TimeDirection _direction)
 		currentRotationPosition->x = x;
 		currentRotationPosition->y = y;
 		break;
-	case TIMEDIRECTION_RIGHT:3
+	case TIMEDIRECTION_RIGHT:
 		m_CurrentDrgree--;
 		x = currentCenterPosition->x - (m_Radius * sin(radians));
 		y = currentCenterPosition->y - (m_Radius * cos(radians));

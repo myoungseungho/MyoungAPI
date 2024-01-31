@@ -338,12 +338,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			break;
 
 		case VK_UP:
-			player->SetPositionY(-10l);
+			player->SetPositionUp(-10l);
 			player->SetRotation(TimeDirection::TIMEDIRECTION_TOP);
 			break;
 
 		case VK_DOWN:
-			player->SetPositionY(+10l);
+			player->SetPositionUp(+10l);
 			player->SetRotation(TimeDirection::TIMEDIRECTION_BOTTOM);
 			break;
 

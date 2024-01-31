@@ -1,5 +1,20 @@
-﻿  Player.cpp
-C:\Users\명승호\Desktop\MyoungAPI\DefaultWindow\Player.cpp(119,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+﻿  Bullet.cpp
+  Player.cpp
+  listBulletSpace.cpp
+C:\Users\명승호\Desktop\MyoungAPI\DefaultWindow\Player.cpp(120,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   (소스 파일 '/Player.cpp'을(를) 컴파일하는 중)
   
+C:\Users\명승호\Desktop\MyoungAPI\DefaultWindow\listBulletSpace.cpp(186,45): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/listBulletSpace.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\명승호\Desktop\MyoungAPI\DefaultWindow\listBulletSpace.cpp(186,28): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/listBulletSpace.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\명승호\Desktop\MyoungAPI\DefaultWindow\listBulletSpace.cpp(187,47): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/listBulletSpace.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\명승호\Desktop\MyoungAPI\DefaultWindow\listBulletSpace.cpp(187,28): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/listBulletSpace.cpp'을(를) 컴파일하는 중)
+  
+  코드를 생성하고 있습니다...
   DefaultWindow.vcxproj -> C:\Users\명승호\Desktop\MyoungAPI\Debug\DefaultWindow.exe

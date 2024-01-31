@@ -18,7 +18,7 @@ public:
 	void Initialize();
 public:
 	void SetPositionX(long);
-	void SetPositionY(long);
+	void SetPositionUp(long);
 	void SetRotation(TimeDirection);
 
 	void SetVecRePut(Bullet*);
